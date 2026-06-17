@@ -47,6 +47,7 @@ public class DatabaseRecorder implements Recorder {
             statement.setString(2, song.title());
             statement.setInt(3, song.year());
             statement.setString(4, song.genre());
+            statement.addBatch();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
